@@ -110,13 +110,7 @@ public class AndroidGesture extends AppSetup{
 //		}
 //	}
 	public void scrollToElementAndClick(String element_name_to_scrollTo) {
-		// TODO Auto-generated method stub
-		
-//		String part1 = "//android.widget.TextView[@text='";
-//		String part2 = "']";
-		//String completeXpath = part1+element_name_to_scrollTo+part2;
-		//List<AndroidElement> elementInMind = driver.findElements(By.xpath("//android.widget.TextView[@text='" + element_name_to_scrollTo + "']"));
-		List<AndroidElement> elementInMind = driver.findElements(By.xpath("//android.widget.TextView[@text='" + element_name_to_scrollTo + "']"));
+ 		List<AndroidElement> elementInMind = driver.findElements(By.xpath("//android.widget.TextView[@text='" + element_name_to_scrollTo + "']"));
 		while(elementInMind.size() == 0) {
 			
 			scrollDown();
@@ -128,18 +122,8 @@ public class AndroidGesture extends AppSetup{
 	}
 	public void clickElement(String elementToClick) {
 		
-//		String part1 = "//android.widget.TextView[@text='";
-//		String part2 = "']";
-//		String completeXpath = part1+elementtoClick+part2;
 	WebElement view = driver.findElement(By.xpath("//android.widget.TextView[@text = ' $elementToClick  ']"));
-//		WebElement view = driver.findElement(By.xpath(completeXpath));
-//		
-// 		   view.click();
-		
-		//WebElement view = driver.findElementByAndroidUIAutomator("text(${elementToClick})");
-		   view.click();
-		
-		
-	}
+  		   view.click();
+	 	}
 
 }
